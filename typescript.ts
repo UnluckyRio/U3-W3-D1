@@ -193,10 +193,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <p>Auto: ${miaAuto.marca} ${miaAuto.modello} (${miaAuto.anno})</p>
         `;
 
-    // Aggiungo uno stile per rendere il contenuto più visibile
-    contentDiv.style.backgroundColor = "#f0f0f0";
-    contentDiv.style.padding = "20px";
-    contentDiv.style.borderRadius = "8px";
-    contentDiv.style.marginTop = "20px";
+    // Gli stili sono già definiti nel CSS, non serve aggiungere stili inline
+    // Il contenuto sarà automaticamente stilizzato dal CSS della pagina
   }
 });

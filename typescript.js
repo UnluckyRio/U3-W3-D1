@@ -15,21 +15,21 @@ isStudyingTypeScript = true;
 //3) Tipizza il parametro della seguente funzione:
 //const greet = (name) => { return "Ciao " + name }
 var greet = function (name) {
-  return "Ciao " + name;
+    return "Ciao " + name;
 };
 //4) Specifica il tipo di ritorno della seguente funzione:
 //const sum = (a: number, b: number) => { return a + b }
 function sum(a, b) {
-  return a + b;
+    return a + b;
 }
 //5) Crea una funzione che accetti un prezzo e restituisca il prezzo con IVA (22%). Usa i tipi appropriati.
 function calcolaPrezzoConIVA(prezzo) {
-  return prezzo * 1.22;
+    return prezzo * 1.22;
 }
 //6) Crea una funzione che concateni due stringhe e restituisca la lunghezza totale.
 function concatenaELunghezza(str1, str2) {
-  var stringaConcatenata = str1 + str2;
-  return stringaConcatenata.length;
+    var stringaConcatenata = str1 + str2;
+    return stringaConcatenata.length;
 }
 //7) Cos'è un Type Union e come si scrive?
 // Un Type Union permette a una variabile di avere più tipi possibili, si scrive usando il simbolo |
@@ -48,73 +48,39 @@ var numbers1 = [1, 2, 3];
 var numbers2 = [1, 2, 3];
 var esempioDati = ["primo", "secondo", "terzo", 4, 5];
 var studenti = [
-  { nome: "Mario", voto: 8 },
-  { nome: "Lucia", voto: 9 },
-  { nome: "Giuseppe", voto: 7 },
+    { nome: "Mario", voto: 8 },
+    { nome: "Lucia", voto: 9 },
+    { nome: "Giuseppe", voto: 7 },
 ];
 //17) Crea un oggetto che implementi l'interfaccia Auto.
 var miaAuto = {
-  marca: "Toyota",
-  modello: "Corolla",
-  anno: 2023,
-  numeroPorte: 4,
-  tipoCarburante: "benzina",
+    marca: "Toyota",
+    modello: "Corolla",
+    anno: 2023,
+    numeroPorte: 4,
+    tipoCarburante: "benzina",
 };
 var coppia = { primo: "ciao", secondo: 42 };
 // Esempio di utilizzo dell'interfaccia generica
 var rispostaUtente = {
-  success: true,
-  message: "Utente recuperato con successo",
-  data: { email: "test@example.com", telefono: "123456789" },
-  timestamp: new Date(),
+    success: true,
+    message: "Utente recuperato con successo",
+    data: { email: "test@example.com", telefono: "123456789" },
+    timestamp: new Date(),
 };
 // Codice aggiuntivo per interagire con la pagina HTML
 // Funzione che viene eseguita quando la pagina è caricata
 window.addEventListener("DOMContentLoaded", function () {
-  // Ottiengo il riferimento al div content
-  var contentDiv = document.getElementById("content");
-  if (contentDiv) {
-    // Crea contenuto dinamico usando le variabili TypeScript definite sopra
-    var welcomeMessage = "Ciao "
-      .concat(myName, "! Hai ")
-      .concat(age, " anni e stai studiando TypeScript: ")
-      .concat(isStudyingTypeScript ? "Sì" : "No");
-    // Aggiungo il messaggio alla pagina con esempi delle nuove funzioni
-    contentDiv.innerHTML =
-      "\n            <h2>Informazioni dall'TypeScript:</h2>\n            <p>"
-        .concat(
-          welcomeMessage,
-          "</p>\n            <p>Risultato della funzione greet: "
-        )
-        .concat(greet(myName), "</p>\n            <p>Somma di 10 + 15 = ")
-        .concat(
-          sum(10, 15),
-          "</p>\n            <h3>Esempi delle funzioni implementate:</h3>\n            <p>Prezzo con IVA (\u20AC100): \u20AC"
-        )
-        .concat(
-          calcolaPrezzoConIVA(100).toFixed(2),
-          '</p>\n            <p>Lunghezza concatenazione "Hello" + "World": '
-        )
-        .concat(
-          concatenaELunghezza("Hello", "World"),
-          "</p>\n            <p>Giorno della settimana: "
-        )
-        .concat(oggi, "</p>\n            <p>Studenti: ")
-        .concat(
-          studenti
-            .map(function (s) {
-              return s.nome + " (voto: " + s.voto + ")";
-            })
-            .join(", "),
-          "</p>\n            <p>Auto: "
-        )
-        .concat(miaAuto.marca, " ")
-        .concat(miaAuto.modello, " (")
-        .concat(miaAuto.anno, ")</p>\n        ");
-    // Aggiungo uno stile per rendere il contenuto più visibile
-    contentDiv.style.backgroundColor = "#f0f0f0";
-    contentDiv.style.padding = "20px";
-    contentDiv.style.borderRadius = "8px";
-    contentDiv.style.marginTop = "20px";
-  }
+    // Ottiengo il riferimento al div content
+    var contentDiv = document.getElementById("content");
+    if (contentDiv) {
+        // Crea contenuto dinamico usando le variabili TypeScript definite sopra
+        var welcomeMessage = "Ciao ".concat(myName, "! Hai ").concat(age, " anni e stai studiando TypeScript: ").concat(isStudyingTypeScript ? "Sì" : "No");
+        // Aggiungo il messaggio alla pagina con esempi delle nuove funzioni
+        contentDiv.innerHTML = "\n            <h2>Informazioni dall'TypeScript:</h2>\n            <p>".concat(welcomeMessage, "</p>\n            <p>Risultato della funzione greet: ").concat(greet(myName), "</p>\n            <p>Somma di 10 + 15 = ").concat(sum(10, 15), "</p>\n            <h3>Esempi delle funzioni implementate:</h3>\n            <p>Prezzo con IVA (\u20AC100): \u20AC").concat(calcolaPrezzoConIVA(100).toFixed(2), "</p>\n            <p>Lunghezza concatenazione \"Hello\" + \"World\": ").concat(concatenaELunghezza("Hello", "World"), "</p>\n            <p>Giorno della settimana: ").concat(oggi, "</p>\n            <p>Studenti: ").concat(studenti
+            .map(function (s) { return s.nome + " (voto: " + s.voto + ")"; })
+            .join(", "), "</p>\n            <p>Auto: ").concat(miaAuto.marca, " ").concat(miaAuto.modello, " (").concat(miaAuto.anno, ")</p>\n        ");
+        // Gli stili sono già definiti nel CSS, non serve aggiungere stili inline
+        // Il contenuto sarà automaticamente stilizzato dal CSS della pagina
+    }
 });

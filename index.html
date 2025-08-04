@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World - TypeScript</title>
+    <!-- Collegamento al foglio di stile esterno -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- Contenuto principale della pagina -->
-    <header>
-      <h1>Benvenuto nella mia pagina con TypeScript!</h1>
-    </header>
-    <main>
-      <!-- Div per contenuto dinamico generato da TypeScript -->
-      <div id="content"></div>
-    </main>
+    <div class="container">
+      <!-- Header con design moderno -->
+      <header>
+        <h1>🚀 Hello World!</h1>
+        <p class="subtitle">Esplora il potere di TypeScript</p>
+      </header>
+
+      <main>
+        <!-- Sezione di benvenuto -->
+        <div class="welcome-section">
+          <h2>✨ Benvenuto nella mia pagina</h2>
+          <p class="welcome-message">Dove TypeScript incontra il design moderno</p>
+        </div>
+
+        <!-- Div per contenuto dinamico generato da TypeScript -->
+        <div id="content">
+          <div class="loading">Caricamento contenuto TypeScript</div>
+        </div>
+      </main>
+    </div>
+
     <!-- Collegamento al file JavaScript compilato da TypeScript -->
     <script src="typescript.js"></script>
   </body>
